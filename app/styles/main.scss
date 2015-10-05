@@ -169,13 +169,13 @@ a:hover {
         width: auto;
         height: auto;
         background-size: cover;
-        z-index: 10;
+
+        z-index: 200;
     }
     #videoControl {
         position: relative;
         top: -90%;
         left: 43%;
-        z-index: 200;
         button {
             margin:5px;
             border: 2px solid rgba(0,0,0,0.7);
@@ -203,7 +203,7 @@ a:hover {
     background-color: #d9d9d9;
     background-image: url("../images/dimension.png");
     #yellowSq {
-        position:relative;
+        /*position:relative;
         top:-30px;
         left:-120px;
         width: 400px;
@@ -212,26 +212,110 @@ a:hover {
         -webkit-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
         -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
         box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
-        -ms-transform: rotate(-30deg); /* IE 9 */
-        -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+        -ms-transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
         transform: rotate(-30deg);
-        z-index: 2;
+        z-index: 2;*/
+        position:relative;
+        top: 30px;
     }
     #content {
         font-size:16px;
-        width: 55%;
         padding: 60px;
         line-height: 2;
         p {
             margin-top: 50px;
         }
         img {
-            position:relative;
-            top: -310px; left: 600px;
+
             border: 4px solid white;
             -webkit-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
             -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
             box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
+        }
+
+    }
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+    }
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInY {
+    0% {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotateY(-10deg);
+    }
+    70% {
+        transform: perspective(400px) rotateY(10deg);
+    }
+    100% {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+.flipInY {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipInY;
+    backface-visibility: visible !important;
+    animation-name: flipInY;
+}
+#section3 {
+    background-color: #a6a588;
+    background-image: url("../images/gradient-squares.png");
+    text-align: center;
+    img {
+        border: 4px solid white;
+        -webkit-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
+        box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
+    }
+}
+
+#section4 {
+    background: url("../images/TMP.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #EEE;
+    #content {
+        padding: 100px;
+
+    }
+}
+
+#section5 {
+    color: #222;
+    font-size: 16px;
+    background-color: #fffbf5;
+    background-image: url("http://www.transparenttextures.com/patterns/pixel-weave.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    #content {
+        padding-left: 200px;
+        p#email {
+            margin: 20px;
         }
     }
 }

@@ -6,6 +6,14 @@ $(document).ready(function() {
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['Home', 'Legacy', 'Teams', 'Board', 'Sponsor', 'Contact'],
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+
+            //using anchorLink
+            if(anchorLink == 'board'){
+                $('#boardImg').addClass('animated flipInY');
+            }
+        }
     });
 
     $('#bgvid').get(0).play();
