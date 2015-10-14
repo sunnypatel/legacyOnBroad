@@ -1,3 +1,5 @@
+/*jshint strict: true */
+"use strict";
 $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors: ['home', 'legacy', 'teams', 'board', 'sponsor', 'contact'],
@@ -6,20 +8,23 @@ $(document).ready(function() {
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['Home', 'Legacy', 'Teams', 'Board', 'Sponsor', 'Contact'],
-        afterLoad: function(anchorLink, index){
-            var loadedSection = $(this);
-
+        afterLoad: function(anchorLink){
             //using anchorLink
-            if(anchorLink == 'board'){
+            if(anchorLink === 'board'){
                 $('#boardImg').addClass('animated flipInY');
+            }
+        },
+        onLeave: function(index, nextIndex, direction){
+            if(index == 1) {
+                $('#bgvid').get(0).pause();
             }
         }
     });
 
-    $('#bgvid').get(0).play();
+    var isPaused = true;
+    $('#bgvid').get(0).pause();
 
 });
-var isPaused = false;
 
 
 function toggleVideo() {
