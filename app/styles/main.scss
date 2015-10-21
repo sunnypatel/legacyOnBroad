@@ -24,6 +24,22 @@ body {
   font-family: 'Voltaire-Regular' sans-serif;
   font-family: 'Open Sans', sans-serif;
 }
+footer {
+	position:absolute;
+	bottom: 0px;
+	width:100%;
+	height: 60px;
+	z-index: 500;
+	background-color:rgba(0, 0, 0, 0.7);
+	border: none;
+	color: #ededed;
+	p {
+		padding: 20px 100px;
+		a {
+			color: #ededed;
+		}
+	}
+}
 a {
     color: #e2b700;
 
@@ -34,8 +50,7 @@ a:hover {
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
-.footer {
+.marketin {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -51,13 +66,6 @@ a:hover {
     line-height: 40px;
     padding-bottom: 19px;
   }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -110,31 +118,35 @@ a:hover {
 #menuContainer{
 
     background-color:rgba(0, 0, 0, 0.7);
-    #menu {
-
-        padding-left:10px;
-        #brand {
-            background:url("../images/LegacyOnBroad_transparent_logoblack.png");
-            background-repeat: no-repeat;
-            margin:10px;
-            margin-bottom:0px;
-            margin-top:0px;
-            padding-top:10px;
-            width:220px;
-            height:52px;
-            background-position-y: 10px;
-        }
-        a {
-            font-size:13px;
-        }
-        a:hover {
-            border-bottom:1px solid yellow;
-        }
-        .active {
-            background: none;
-            border-bottom: 1px solid #bc9120;
+    .container {
+        //min-width: 800px;
+        #menu {
+            width: 100%;
+            padding-left:10px;
+            #brand {
+                background:url("../images/LegacyOnBroad_transparent_logoblack.png");
+                background-repeat: no-repeat;
+                margin:10px;
+                margin-bottom:0px;
+                margin-top:0px;
+                padding-top:10px;
+                width:220px;
+                height:52px;
+                background-position-y: 10px;
+            }
+            a {
+                font-size:13px;
+            }
+            a:hover {
+                border-bottom:1px solid yellow;
+            }
+            .active {
+                background: none;
+                border-bottom: 1px solid #bc9120;
+            }
         }
     }
+
 }
 
 #fp-nav {
@@ -149,6 +161,7 @@ a:hover {
     -o-background-size: cover;
     background-size: cover;
     z-index: 2;
+	color: #f4f4f4;
 
     #video-container {
         z-index: 0;
@@ -160,17 +173,26 @@ a:hover {
         text-align:right;
         margin-right: 200px;
         font-size: 80px;
-        color: #f4f4f4;
     }
+	#content {
+		margin-left: 200px;
+		font-size:24px;
+	}
 }
 
 #section1 {
+	background-color: #1f1f1f;
+	background-image: url("http://www.transparenttextures.com/patterns/black-linen.png");
+	text-align: center;
     video#bgvid {
         width: auto;
         height: auto;
         background-size: cover;
-
+		border: 1px solid #222;
         z-index: 200;
+		-webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,1);
+		-moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,1);
+		box-shadow: 4px 3px 5px 0px rgba(0,0,0,1);
     }
     #videoControl {
         position: relative;
@@ -199,25 +221,15 @@ a:hover {
 }
 
 #section2 {
+	.fp-tableCell{
+		vertical-align: top;
+	}
 
     background-color: #d9d9d9;
     background-image: url("../images/dimension.png");
-    #yellowSq {
-        /*position:relative;
-        top:-30px;
-        left:-120px;
-        width: 400px;
-        height: 200px;
-        background: url("../images/img-noise-361x370.png");
-        -webkit-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
-        -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
-        box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.75);
-        -ms-transform: rotate(-30deg);
-        -webkit-transform: rotate(-30deg);
-        transform: rotate(-30deg);
-        z-index: 2;*/
-        position:relative;
-        top: 30px;
+	#yellowSq {
+		position:relative;
+		top: 52px;
     }
     #content {
         font-size:16px;
@@ -282,8 +294,8 @@ a:hover {
     animation-name: flipInY;
 }
 #section3 {
-    background-color: #a6a588;
-    background-image: url("../images/gradient-squares.png");
+	background-color: #394657;
+	background-image: url("http://www.transparenttextures.com/patterns/grey-washed-wall.png");
     text-align: center;
     img {
         border: 4px solid white;
