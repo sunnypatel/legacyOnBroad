@@ -2,12 +2,12 @@
 "use strict";
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        anchors: ['home', 'legacy', 'teams', 'board', 'sponsor', 'contact'],
+        anchors: ['home', 'legacy', 'teams', 'tickets', 'board', 'sponsor', 'contact'],
         menu: '#menu',
         scrollingSpeed: 1000,
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Home', 'Legacy', 'Teams', 'Board', 'Sponsor', 'Contact'],
+        navigationTooltips: ['Home', 'Legacy', 'Teams', 'Tickets', 'Board', 'Sponsor', 'Contact'],
         afterLoad: function(anchorLink){
             //using anchorLink
             if(anchorLink === 'board'){
